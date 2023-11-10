@@ -1,0 +1,22 @@
+{
+    "name": "UnityMvvmToolkit.UniTask",
+    "references": [
+        "UnityMvvmToolkit.Core",
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.cysharp.unitask",
+            "expression": "",
+            "define": "UNITYMVVMTOOLKIT_UNITASK_SUPPORT"
+        }
+    ],
+    "noEngineReferences": false
+}
