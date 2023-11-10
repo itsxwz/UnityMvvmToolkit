@@ -75,8 +75,14 @@ namespace UnityMvvmToolkit.Common
         protected abstract void OnDispose();
         protected abstract IReadOnlyList<IBindableElement> GetBindableElements();
 
+        /// <summary>
+        /// 对类类型的绑定上下文进行创建式获取
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException"></exception>
         protected virtual TBindingContext GetBindingContext()
         {
+            // TBindingContext是class类型，检查是否有无参构造函数
             if (typeof(TBindingContext).GetConstructor(Type.EmptyTypes) is null)
             {
                 throw new InvalidOperationException(
@@ -103,6 +109,9 @@ namespace UnityMvvmToolkit.Common
             return ImmutableDictionary.Empty<Type, object>();
         }
 
+        /// <summary>
+        /// 设置绑定上下文（已初始化）
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void SetBindingContext()
         {
@@ -117,6 +126,9 @@ namespace UnityMvvmToolkit.Common
             SetBindingContext(GetBindableElements(), bindingContext, GetObjectProvider(), true);
         }
 
+        /// <summary>
+        /// 重置绑定上下文（已销毁）
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void ResetBindingContext()
         {

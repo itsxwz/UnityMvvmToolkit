@@ -6,6 +6,7 @@ namespace UnityMvvmToolkit.Core.Attributes
     public sealed class ObservableAttribute : Attribute
     {
         /// <summary>
+        /// [NOTE] 
         /// If PropertyName is not specified, the field name will be converted from '_name' or 'm_name' to 'Name'.
         /// </summary>
         /// <param name="propertyName">Property name to bind.</param>

@@ -11,5 +11,6 @@ namespace UnityMvvmToolkit.Core.Attributes
         AttributeTargets.Event | AttributeTargets.Interface | AttributeTargets.Delegate, Inherited = false)]
     public class PreserveAttribute : Attribute
     {
+        // 防止字节码剥离删除类、方法、字段、属性
     }
 }

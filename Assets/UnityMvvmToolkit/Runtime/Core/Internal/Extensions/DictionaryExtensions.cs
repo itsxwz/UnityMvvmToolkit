@@ -2,6 +2,9 @@
 
 namespace UnityMvvmToolkit.Core.Internal.Extensions
 {
+    /// <summary>
+    /// 不可变字典
+    /// </summary>
     internal static class ImmutableDictionary
     {
         internal static IReadOnlyDictionary<TKey, TValue> Empty<TKey, TValue>()
