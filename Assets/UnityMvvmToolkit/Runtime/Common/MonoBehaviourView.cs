@@ -11,6 +11,10 @@ using UnityMvvmToolkit.Core.Internal.Extensions;
 
 namespace UnityMvvmToolkit.Common
 {
+    /// <summary>
+    /// 执行顺序（数值越小，执行顺序越靠前，范围[int.MinValue, int.MaxValue]）
+    /// </summary>
+    /// <typeparam name="TBindingContext"></typeparam>
     [DefaultExecutionOrder(1)]
     public abstract class MonoBehaviourView<TBindingContext> : MonoBehaviour, IBindableElement
         where TBindingContext : class, IBindingContext
